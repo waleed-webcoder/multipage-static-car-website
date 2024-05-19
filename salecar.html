@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>sale your cars</title>
+    <style>
+        #faq{
+            background: #a8a8a8;
+            box-shadow: 0px 0px 11px 0px black;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class=" text-white  bg-gray-600 flex justify-around items-center h-20">
+        <div>
+            <span class="font-serif font-extrabold text-4xl text-red-700">C</span><span class="text-white text-2xl font-semibold">ar&nbsp;</span><span class="font-serif text-3xl font-bold text-yellow-500">W</span><span class="text-white text-2xl font-semibold">ebsite</span>
+        </div>
+        <ul class="hidden lg:flex justify-center items-center gap-8 text-[18px]">
+            <li class="hover:border-b-2 "><a  href="index.html">Home</a></li>
+            <li class="hover:border-b-2"><a  href="about.html">About us</a></li>
+            <li class="hover:border-b-2"><a  href="contact.html">Contact us</a></li>
+            <li class="hover:border-b-2"><a  href="cars.html">Gallery</a></li>
+        </ul>
+        <ul class="hidden lg:flex justify-center items-center gap-8">
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md  px-5"><a href="salecar.html">Sell Cars</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md px-5"><a href="cars.html">Buy Cars</a></li>
+            
+        </ul>
+        <button id="toggleButton" class="lg:hidden text-white bg-gray-600 p-3 rounded-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
+    </nav>
+    <!-- code for mobile menu  -->
+    
+    <ul id="mblmenu" class=" w-full  h-screen hidden justify-evenly flex-col items-center bg-orange-600 gap text-red-50 text-[18px]">
+            <li class="hover:border-b-2"><a  href="index.html">Home</a></li>
+            <li class="hover:border-b-2"><a  href="about.html">About us</a></li>
+            <li class="hover:border-b-2"><a  href="contact.html">Contact us</a></li>
+            <li class="hover:border-b-2"><a  href="cars.html">Gallery</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md  px-5"><a href="salecar.html">Sell Cars</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md px-5"><a href="cars.html">Buy Cars</a></li>
+    </ul>
+    <div class="bg-slate-300 py-6 px-8 flex flex-col justify-center items-center gap-4">
+        <p class="text-center font-semibold text-3xl text-slate-900 font-mono">Sell Your Car Online in Pakistan Instantly!</p>
+        <p class="text-center text-3xl font-semibold text-zinc-800">Choose How To Sell Your Car</p>
+        <div class="grid sm:grid-cols-2 gap-4 px-1 py-5">
+            <div class="bg-white py-6 px-11 shadow-xl rounded-lg flex justify-center items-center flex-col gap-3">
+                <p class="text-center px-4 py-2 text-2xl font-semibold ">Post your Ad on Our Website</p>
+                <img src="https://wsa2.pakwheels.com/assets/postad-img-58f5eb96777aff56872a2ee71b6475fd.png" alt="image">
+                <p class="text-start">Post your Ad for Free in 3 Easy Steps</p>
+                <p class="text-start">Get Genuine offers from Verified Buyers</p>
+                <p class="text-start">Sell your car Fast at the Best Price</p>
+                <a  class="ad bg-blue-700 hover:bg-green-700 text-lg rounded-lg text-white py-2 px-9 text-center" href=""><button>Post an Ad</button></a>
+            </div> 
+            <div class="bg-white py-6 px-11 shadow-xl rounded-lg flex justify-center items-center flex-col gap-3">
+                <p class="text-center px-4 py-2 text-2xl font-semibold ">Try feature Sell It For Me</p>
+                <img src="https://wsa4.pakwheels.com/assets/postsifm-ad-f4537763e3d48b3dafd3926515aa7c4e.png" alt="image">
+                <p class="text-start">Dedicated Sales Expert to Sell your Car</p>
+                <p class="text-start">We Bargain for you and share the Best Offer</p>
+                <p class="text-start">We ensure Safe & Secure Transaction</p>
+                <a class="ad bg-blue-700 hover:bg-green-700 text-lg rounded-lg text-white py-2 px-9 text-center" href=""><button>Sell it for me</button></a>
+            </div> 
+            
+           
+        </div>
+    </div>
+    <!-- code for why sell your car on our website  -->
+    <div class=" bg-gray-500 py-10 px-7 flex justify-center items-center flex-col gap-4">
+        <p class="text-3xl text-center text-black py-1 px-1">Why Sell Your Car On PakWheels?</p>
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-4 px-9 py-3">
+            <div>
+                <div class="flex justify-center items-center relative top-4">
+                    <img  src="https://wsa1.pakwheels.com/assets/product/why-pw-icons/number-one-d6bd6d78a4fdfe2d5185bcaae6cce48e.svg" alt="">
+                </div>
+                <div class="flex bg-blue-200 rounded-lg justify-center h-28 py-5 items-center px-2">
+                   <p class="text-center bg-blue-200 text-xl">Pakistan’s #1 automotive marketplace</p>
+                </div> 
+            </div>
+            <div>
+                <div class="flex justify-center items-center relative top-4">
+                    <img  src="https://wsa4.pakwheels.com/assets/product/why-pw-icons/five-lakhs-1aa9a4262829fe2620cc6f2b0334c90a.svg" alt="">
+                </div>
+                <div class="flex bg-blue-200 rounded-lg justify-center h-28 py-5 items-center px-2">
+                   <p class="text-center bg-blue-200 text-xl">5 lac+ visitors daily</p>
+                </div> 
+            </div>
+            <div>
+                <div class="flex justify-center items-center relative top-4">
+                    <img  src="https://wsa4.pakwheels.com/assets/product/why-pw-icons/three-million-cf3a9b03576c8dd1a41c12b199e8c2b3.svg" alt="">
+                </div>
+                <div class="flex bg-blue-200 rounded-lg justify-center h-28 py-5 items-center px-2">
+                   <p class="text-center bg-blue-200 text-xl">3 million+ cars sold</p>
+                </div> 
+            </div>
+            <div>
+                <div class="flex justify-center items-center relative top-4">
+                    <img  src="https://wsa2.pakwheels.com/assets/product/why-pw-icons/fourty-eight-hours-88070954bf5e4d87ace1f24d3bc21f33.svg" alt="">
+                </div>
+                <div class="flex bg-blue-200 rounded-lg justify-center h-28 py-5 items-center px-2">
+                   <p class="text-center bg-blue-200 text-xl">80% cars sold within 48 hours</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- code for sell your car in 3 steps  -->
+    <div class="bg-white py-8 px-7 flex justify-center items-center flex-col gap-4">
+        <p class="text-3xl text-center text-black py-1 px-1">3 Simple Steps To Sell Your Car</p>
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-4 px-7 py-3">
+            <div class=" bg-slate-200 rounded-md flex justify-center items-center flex-col gap-4 px-3 py-4">
+                <img src="https://wsa4.pakwheels.com/assets/product/why-pw-icons/sign-up-icon-d8e07682bbdee4b4f3c8983608f60b48.svg" alt="image">
+                <p class="font-semibold text-center text-2xl">Sign up</p>
+                <p class="text-center px-3">Register yourself on PakWheels.com to post an ad.</p>
+            </div>
+            <div class="bg-slate-200 rounded-md  flex justify-center items-center flex-col gap-4 px-3 py-4">
+                <img src="https://wsa1.pakwheels.com/assets/product/why-pw-icons/create-free-ad-05759096139df89f3aed58dbe9e9de83.svg" alt="image">
+                <p class="font-semibold text-center text-2xl">Create your ad</p>
+                <p class="text-center px-3">Provide necessary details about your used car and make sure to upload clear photos.</p>
+            </div>
+            <div class="bg-slate-200 rounded-md  flex justify-center items-center flex-col gap-4 px-3 py-4">
+                <img src="https://wsa4.pakwheels.com/assets/product/why-pw-icons/instant-offer-315decde0a11240ce7f88ca74cf42822.svg" alt="image">
+                <p class="font-semibold text-center text-2xl">Get Instant Offers</p>
+                <p class="text-center px-3">Relax & get ready for instant offers from genuine buyers.</p>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <!-- code for our faqs  -->
+    <div id="faq" class="container mx-auto my-8 p-8 bg-white rounded  ">
+        <h1 class="text-2xl font-bold mb-4">Frequently Asked Questions</h1>
+        <div class="faq-section">
+    
+            <div class="faq-item mb-4">
+                <h2 class="question cursor-pointer text-lg font-semibold bg-gray-200 p-4 rounded hover:bg-gray-300">How long will it take to sell a car on PakWheels?</h2>
+                <div class="answer hidden p-4">
+                    <p>According to our past data, it takes a couple of days or even hours to sell a car. The price, pictures and description decides how soon you can sell your car. Get your ad featured to sell it even faster. Check out PakWheels Used Car Selling Guide for more information.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item mb-4">
+                <h2 class="question cursor-pointer text-lg font-semibold bg-gray-200 p-4 rounded hover:bg-gray-300">How can I sell car online in Pakistan?</h2>
+                <div class="answer hidden p-4">
+                    <p>Go to PakWheels.com & post a free ad to sell your car online. PakWheels connects you to millions of buyers easily and quickly from the comfort of your home. All you have to do is post a free ad to sell your car, put up a reasonable price and that’s it! You will get genuine offers from verified buyers.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item mb-4">
+                <h2 class="question cursor-pointer text-lg font-semibold bg-gray-200 p-4 rounded hover:bg-gray-300">Which site is best to sell car online in Pakistan?</h2>
+                <div class="answer hidden p-4">
+                    <p>PakWheels.com is the best site to sell cars online in Pakistan. It has millions of verified buyers and tons of other car selling features including PakWheels Sell it For Me, used car price calculator.</p>
+                </div>
+            </div>
+            <div class="faq-item mb-4">
+                <h2 class="question cursor-pointer text-lg font-semibold bg-gray-200 p-4 rounded hover:bg-gray-300">Is it worth repairing my Used Car before Selling?</h2>
+                <div class="answer hidden p-4">
+                    <p>It is easier to get a better price for your car if you repair it before selling. Identifying major and minor damages to the car and getting them repaired can restore and increase the value of your car. This will allow you to get a much better price for your car than you could get before repairing it.</p>
+                </div>
+            </div>
+            <div class="faq-item mb-4">
+                <h2 class="question cursor-pointer text-lg font-semibold bg-gray-200 p-4 rounded hover:bg-gray-300">How can I get the most money for selling my car?</h2>
+                <div class="answer hidden p-4">
+                    <p>Post detailed description including condition of the car, mileage, service history, documents and ownership details etc. Upload good quality pictures and set a fair price based on market value.</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <!-- code for footers  -->
+    <footer class="py-14 bg-black text-white flex flex-col justify-center items-center gap-3 px-12">
+        <div class="grid md:grid-cols-3 sm:grid-cols-2  gap-4 py-2 px-2">
+          <div class="flex flex-col justify-center items-center gap-3 py-3 px-2 ">
+            <p class="text-2xl font-bold underline text-start">Carwebsite</p>
+            <p class="text-xl text-start font-normal">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <div class="flex justify-center items-center gap-4 px-2 py-3">
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href="https://twitter.com/x/migrate?tok=eyJlIjoiL1dhbGVlZF9fX1M%2FdD1QRkxEd3V4bW5WTkFjVXZxUnJvd0FRJnM9MDkiLCJ0IjoxNzE2MTQxOTA3ffZGZEPmtgpHKBvzf1aZZu0%3D"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href="https://web.facebook.com/people/Waleed-S/61557914682339/"><i class="fa-brands fa-facebook"></i></a>
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href="https://waleed-s-portfolio.netlify.app"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div> 
+          
+          <div class="flex flex-col justify-center items-center gap-3 py-4 px-3">
+            <p class="text-start text-2xl font-bold">Quick Links</p>
+            <ul class="flex justify-center flex-col items-center gap-3 py-3 text-white">
+                <li class="hover:text-purple-700"><a href="index.html">Home</a></li>
+                <li class="hover:text-purple-700"><a href="about.html">About</a></li>
+                <li class="hover:text-purple-700"><a href="salecar.html">Services</a></li>
+                <li class="hover:text-purple-700"><a href="cars.html">Cars</a></li>
+                <li class="hover:text-purple-700"><a href="contact.html">Sitemap</a></li>
+                <li class="hover:text-purple-700"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col py-4 px-3 justify-center items-center text-white gap-3">
+            <p class="text-start text-2xl font-bold">Have a Questions?</p>
+            <div class="flex justify-between gap-3 py-4">
+                <i class="fa-solid fa-phone"></i>
+                <p>+923202815090</p>
+            </div>
+            <div class="flex justify-center gap-3 px-2 py-4">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Pakistan , Punjab, Vehari</p>
+            </div>
+            <div class="flex justify-center text-white gap-3 px-2 py-4">
+                <i class="fa-regular fa-envelope"></i>
+                <p>waleed.webcoder@gmail.com</p>
+            </div>
+          </div> 
+
+        </div>
+        <p class="text-center font-bold">Copyright ©2024 All rights reserved &nbsp;&nbsp; |&nbsp; Developed   by Waleed S</p>
+    </footer>
+    <script>
+        let carda=document.querySelectorAll(".ad")
+       carda.forEach((e)=>{
+        e.addEventListener("click",(i)=>{
+            i.preventDefault();
+            alert("Please Signup/Login first !");
+
+        })
+       })
+    </script>
+    <!-- script for faqs  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const questions = document.querySelectorAll('.question');
+    
+            questions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle('hidden');
+                });
+            });
+        });
+    </script>
+    <script>
+        let button=document.getElementById("toggleButton");
+        let mblmenu=document.getElementById("mblmenu");
+        let repeat=1;
+        button.addEventListener("click",()=>{
+            
+            if(repeat==1){
+    
+                mblmenu.classList.remove("hidden");
+                mblmenu.classList.add("flex");
+                repeat=0;
+            }
+            else if(repeat==0){
+                mblmenu.classList.add("hidden");
+                mblmenu.classList.remove("flex");
+                repeat=1;
+    
+            }
+        })
+    </script>
+</body>
+</html>

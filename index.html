@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My car website</title>
+    <style>
+        .card{
+            box-shadow: 0px 0px 8px 2px black;
+            border-radius: 12px;
+        }
+        .card1{
+            box-shadow: 0px 0px 8px 6px rgb(61, 19, 19);
+            border-top-right-radius: 55px;
+            border-bottom-left-radius: 55px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            overflow: hidden;
+
+        }
+        .card1:hover{
+            border-top-left-radius: 55px;
+            border-bottom-right-radius: 55px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius:0px ;
+            background-color: rgba(185, 145, 92, 0.644);
+
+        }
+        #discount{
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+        .popular{
+            -webkit-text-stroke: 1px rgb(242, 248, 229);
+        }
+        .sale{
+            box-shadow: 0px 0px 5px 3px rgb(61, 19, 19);
+            border-radius: 35%;
+        }
+        .salebtn{
+            background-color: red;
+        }
+        .saleimg{
+            box-shadow: 0px 0px 5px 8px rgb(177, 150, 150);
+            border-radius: 15px ;
+        }
+        .customers{
+            border: 2px solid white;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-right-radius: 64px;
+            border-bottom-left-radius: 64px;
+            box-shadow: 0px 0px 5px 5px rgb(145, 99, 99);
+        }
+        .customers:hover{
+            border: 2px solid white;
+            border-top-left-radius: 64px;
+            border-bottom-right-radius: 64px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        .customerimg{
+            box-shadow: 0px 0px 8px 4px rgb(245, 209, 209);
+        }
+        .brand{
+            box-shadow: 0px 0px 11px 0px rgb(214, 192, 192);
+        }
+        .brand:hover{
+            box-shadow: 0px 0px 14px 0px rgb(139, 92, 92);
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body class="bg-black" >
+    <nav class="lg:fixed lg:top-0 lg:left-0 lg:w-full text-white  bg-gray-600 flex justify-around items-center h-20">
+        <div>
+            <span class="font-serif font-extrabold text-4xl text-red-700">C</span><span class="text-white text-2xl font-semibold">ar&nbsp;</span><span class="font-serif text-3xl font-bold text-yellow-500">W</span><span class="text-white text-2xl font-semibold">ebsite</span>
+        </div>
+        <ul class="hidden lg:flex justify-center items-center gap-8 text-[18px]">
+            <li class="hover:border-b-2 " ><a  href="index.html">Home</a></li>
+            <li class="hover:border-b-2"><a  href="about.html">About us</a></li>
+            <li class="hover:border-b-2"><a  href="contact.html">Contact us</a></li>
+            <li class="hover:border-b-2"><a  href="cars.html">Gallery</a></li>
+        </ul>
+        <ul class="hidden lg:flex justify-center items-center gap-8">
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md  px-5"><a href="salecar.html">Sell Cars</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md px-5"><a href="cars.html">Buy Cars</a></li>
+            
+        </ul>
+        <button id="toggleButton" class="lg:hidden text-white bg-gray-600 p-3 rounded-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
+    </nav>
+    <!-- code for mobile menu  -->
+    
+    <ul id="mblmenu" class=" w-full  h-screen hidden justify-evenly flex-col items-center bg-orange-600 gap text-red-50 text-[18px]">
+            <li class="hover:border-b-2"><a  href="index.html">Home</a></li>
+            <li class="hover:border-b-2"><a  href="about.html">About us</a></li>
+            <li class="hover:border-b-2"><a  href="contact.html">Contact us</a></li>
+            <li class="hover:border-b-2"><a  href="cars.html">Gallery</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md  px-5"><a href="salecar.html">Sell Cars</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md px-5"><a href="cars.html">Buy Cars</a></li>
+    </ul>
+
+    
+    <!-- home section  -->
+
+    <div class="grid lg:grid-cols-2 sm:gap-8 lg:gap-2 pb-5 lg:pt-14 px-6 mt-[53px]">
+        <div class=" text-white px-4" >
+            
+            <!-- <p class="text-white leading-4 text-center font-serif  py-12 text-5xl">👋 Hey , <span class="text-red-700 font-serif font-bold text-6xl">f</span>ind Your<br><br><br> Best  Ride With Us !</p> -->
+            <p class="text-white leading-relaxed text-center font-serif  py-4 text-5xl">👋 Hey , <span class="text-red-600 font-serif font-bold text-6xl">f</span>ind Your Best  Ride With Us !</p>
+            <p class="  py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt in eveniet error rem, quas, eum aspernatur odit animi alias quasi nihil!</p><br>
+            <p class=" mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate in, illum maxime deleniti optio. Alias sunt magni tempore delectus. Voluptas repellat dolorem non quo dignissimos ea alias sit adipisci.</p>
+            <div id="btns" class="flex  py-8 flex-col md:flex-row justify-center gap-6 items-center">
+                <a href="about.html" class="py-2 text-center hover:border-b-2 hover:underline underline-offset-2 w-full rounded-md bg-red-600">About</a>
+                <a href="cars.html" class="py-2 text-center hover:border-b-2 hover:underline underline-offset-2 w-full rounded-md bg-red-600">Cars →</a>
+            </div>
+        </div>
+        <div class=" flex justify-center items-center py-3">
+            <img src="https://cdn.pixabay.com/photo/2015/10/01/19/05/car-967470_640.png" alt="">
+        </div>
+
+    </div>
+
+    <!-- code for popular car models  -->
+    <div class=" bg-gray-400 grid py-4 gap-5">     
+            <p class="font-bold popular  font-serif text-center py-6 border-black text-5xl text-black">Popular Cars Models </p>
+        <div class="grid px-4 gap-3 lg:grid-cols-4 py-4 md:grid-cols-3 sm:grid-cols-2">
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 cursor-pointer card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/download-car-png-2.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Audi A4" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2024" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            
+            
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/car-clipart-icon-3.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Ferrari 488" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2024" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/clipart-transparent-car-7.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Jaguar F-Type" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2021" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/car-free-download-transparent-5.png" alt="image"></a>
+                <div class="py-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Ford Mustang" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2023" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/photos-car-1.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Jeep Wrangler" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2025" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/car-free-transparent-png-8.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Volvo XC90" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2024" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            <div class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/background-car-13.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Mini Cooper" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2023" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+            </div>
+            
+            <div  class="carss border-2 hover:brightness-125 hover:backdrop-brightness-100 card border-white flex flex-col justify-between items-center pt-2 ">
+                <a class="hover:animate-bounce" href=""><img src="https://www.transparentpng.com/thumb/car-png/clipart-png-file-car-11.png" alt="image"></a>
+                <div class="pb-4">
+
+                    <div class="flex justify-between px-3 items-center  gap-1">
+                        <span class="font-semibold text-xl">Name:</span><input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Hyundai Sonata" readonly>
+                    </div><br>
+                    <div class="flex justify-center px-3 items-center gap-3">
+                        <span class="font-semibold text-xl" >Year:</span><input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2020" readonly>
+                    </div>
+                </div>
+                <a class="w-full block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> See Details <span class="text-xl ">→</span></p>
+                </a>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+     <!-- code for top offfers  -->
+     
+        <div class="bg-stone-600">
+
+            <p class="popular text-center py-7 leading-9 px-2 font-bold text-5xl text-black">Today ToP Offers</p>
+            <div class="grid md:grid-cols-2 justify-center gap-8 px-6 bg-stone-500 text-black py-12  ">
+            <div class="border-2 carda  card1 border-white flex flex-col justify-between items-center pt-2 ">
+                <a href=""><img src="https://www.transparentpng.com/thumb/car-png/download-car-png-2.png" alt="image"></a>
+                <div class="pb-4 flex justify-between gap-3 flex-col">
+    
+                    <div class="flex justify-between items-center  gap-1">
+                        <p class="font-semibold text-xl">Name:</p>
+                        <input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Audi A4" readonly>
+                    </div>
+                    <div class="flex justify-between items-center gap-3">
+                        <p class="font-semibold text-xl" >Year:</p>
+                        <input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2024" readonly>
+                    </div>
+                    <div class="flex justify-between px-2 items-center gap-2">
+                        <p class="font-semibold text-xl" >Price$:</p>
+                        <input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="3200" readonly>
+                    </div>
+                </div>
+                <a id="discount" class="w-full  block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> 10% Discount <span class="text-xl "></span></p>
+                </a>
+            </div>
+            <div class="border-2 carda card1 border-white flex flex-col justify-between items-center pt-2 ">
+                <a href=""><img src="https://www.transparentpng.com/thumb/car-png/clipart-png-file-car-11.png" alt="image"></a>
+                <div class="pb-4 flex justify-between gap-3 flex-col">
+    
+                    <div class="flex justify-between items-center  gap-1">
+                        <p class="font-semibold text-xl">Name:</p>
+                        <input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Hyundai Sonata" readonly>
+                    </div>
+                    <div class="flex justify-between items-center gap-3">
+                        <p class="font-semibold text-xl" >Year:</p>
+                        <input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2023" readonly>
+                    </div>
+                    <div class="flex justify-between px-2 items-center gap-2">
+                        <p class="font-semibold text-xl" >Price$:</p>
+                        <input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="3200" readonly>
+                    </div>
+                </div>
+                <a id="discount" class="w-full  block bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> 25% Discount <span class="text-xl "></span></p>
+                </a>
+            </div>
+            <div class="border-2  carda card1 border-white flex flex-col justify-between items-center pt-2 ">
+                <a href=""><img src="https://www.transparentpng.com/thumb/car-png/car-clipart-icon-3.png" alt="image"></a>
+                <div class="pb-4 flex justify-between gap-3 flex-col">
+    
+                    <div class="flex justify-between items-center  gap-1">
+                        <p class="font-semibold text-xl">Name:</p>
+                        <input class="w-full rounded-md py-1 cursor-pointer focus:hidden text-center" type="text" name="" id="" value="Ferrari 488" readonly>
+                    </div>
+                    <div class="flex justify-between items-center gap-3">
+                        <p class="font-semibold text-xl" >Year:</p>
+                        <input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="2024" readonly>
+                    </div>
+                    <div class="flex justify-between px-2 items-center gap-2">
+                        <p class="font-semibold text-xl" >Price$:</p>
+                        <input class="w-full cursor-pointer rounded-md py-1 focus:hidden text-center" type="number" name="" id="" value="3200" readonly>
+                    </div>
+                </div>
+                <a id="discount" class="w-full block    bg-yellow-400 hover:bg-yellow-300" href="">
+                    <p class=" w-full py-2 text-center "> 20% Discount <span class="text-xl "></span></p>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+     
+    <!-- code for sale your car in 24 hours  -->
+    
+    <div class="flex py-9 flex-col gap-4 justify-center items-center bg-stone-700">
+        <p class="popular text-center px-5 leading-10  font-bold text-5xl text-black">Sale Your Car in 24 hours</p>
+        <div class="flex justify-center  md:flex-row flex-col-reverse items-center py-4 px-11">
+            <p class="font-medium text-2xl px-3 mt-3 md:mt-0 ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates tempore ratione voluptas quos dolorum, cumque voluptatem quidem molestias quis! Laborum sed suscipit sequi.</p>
+            <img class="saleimg" src="https://icon2.cleanpng.com/20210109/pur/transparent-sale-icon-shopping-and-retail-icon-5ffa0d9fce7254.6284006316102230078456.jpg" alt="">
+        </div>
+        <a class="py-2 rounded-3xl font-semibold text-center px-11 hover:bg-green-600 bg-orange-400" href="salecar.html">Sale Now</a>
+    </div>
+    
+    <!-- code for choose your favourite brand  -->
+    <p class="text-black bg-gray-100 px-2 py-6 text-center font-bold text-4xl">Shop your favorite brand</p>
+    <div class="bg-white grid gap-3 px-7 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 py-6">
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/384x384_full_color/cf0bb1b2deca5e84/Toyota.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Toyota</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/384x384_full_color/614861eca7caf1b4/BMW.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">BMW</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo_text/820x384_full_color/1dd21e0781f0e450/Chevrolet.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Chevrolet</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/605x384_full_color/00fea4dbe4426fc2/Honda.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Honda</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/991x384_full_color/588008e646f944ab/Ford.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Ford</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/1088x384_full_color/0598fce6d069a5a0/Audi.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Audi</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo_text/710x384_full_color/18bc580ce00c3c95/Acura.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Acura</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo_text/384x384_full_color/d88259cdbac929b7/Hyundai.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Hyundai</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/2751x384_full_color/0d87acfca3ddd404/Dodge.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Dodge</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/384x384_full_color/959be7e00726a9e0/Mercedes-Benz.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Mercedes-Benz</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/1629x384_full_color/638bbde84c5f569e/Kia.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Kia</p>
+        </a>
+        <a href="cars.html" class="bg-white brand flex justify-center gap-4 items-center py-8">
+            <img src="https://static.tcimg.net/vehicles/logo/543x384_full_color/c8d23de545755e0d/Lexus.png?auto=format&fill=solid&fit=fill&h=40&w=40" alt="Toyota">
+            <p class="text-center font-bold">Lexex</p>
+        </a>
+        
+    </div>
+
+    <!-- code for why our showroom -->
+    <div class="bg-black flex justify-center items-center flex-col gap-3 py-14 px-4">
+        <p class="text-center text-4xl font-bold py-3 px-2 text-white">Why Our Showroom?</p>
+        <div class= "py-14 px-7 grid md:grid-cols-3 sm:grid-cols-2 gap-5">
+            <div class="flex flex-col justify-center items-center gap-3 py-2 px-6">
+                <img src="https://www.truecar.com/assets/_next/static/images/transparent-pricing-4d7899553551b3a2db95d346ac20062f.svg" alt="">
+                <p class="text-white text-center text-2xl font-bold">Transparent pricing</p>
+                <p class="text-white px-4 text-center text-xl">No surprises here. See how much you'll pay on cars you like.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-3 py-2 px-6">
+                <img src="https://www.truecar.com/assets/_next/static/images/minutes-not-hours-48afd64860a3e72b36d5986738c77eb4.svg" alt="">
+                <p class="text-white text-center text-2xl font-bold">Minutes, not hours</p>
+                <p class="text-white px-4 text-center text-xl">Time saving tools to help you find the right car in a snap.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-3 py-2 px-6">
+                <img src="https://www.truecar.com/assets/_next/static/images/shop-your-way-f575579b12ccf6daf39539dab242c0e2.svg" alt="">
+                <p class="text-white text-center text-2xl font-bold">Shop your way</p>
+                <p class="text-white px-4 text-center text-xl">Your own pace, your own space. Shop online where and when it's convenient for you.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- code for our customers  -->
+
+    <div class="flex justify-center bg-white items-center flex-col px-3 md:px-6 py-10">
+        <p class="popular text-center py-6  px-5 leading-10 font-bold text-5xl text-black">Our Customers</p> 
+        <div class=" py-6 md:px-7 px-4 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+            <div class="bg-gray-400 customers py-4 px-3 flex items-center justify-center gap-4 flex-col">
+                <p class="text-center" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas nam velit rerum. Quidem, recusandae debitis.</p>
+                <p class="text-center text-2xl ">⭐⭐⭐⭐⭐</p>
+                <p class="text-center font-bold text-2xl">Ajay Sharma</p>
+                <img class="rounded-full customerimg h-52 w-52" src="https://img.freepik.com/free-photo/handsome-black-male-dressed-suit-from-wool_613910-15888.jpg?size=626&ext=jpg&ga=GA1.1.472729671.1710508239&semt=ais_user" alt="">
+            </div>
+            <div class="bg-gray-400 customers py-4 px-3 flex items-center justify-center gap-4 flex-col">
+                <p class="text-center" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas nam velit rerum. Quidem, recusandae debitis.</p>
+                <p class="text-center text-2xl ">⭐⭐⭐⭐⭐</p>
+                <p class="text-center font-bold text-2xl">Cointin De-Cock</p>
+                <img class="rounded-full customerimg h-52 w-52" src="https://images.unsplash.com/photo-1584043720379-b56cd9199c94?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+            </div>
+            <div class="bg-gray-400 customers py-4 px-3 flex items-center justify-center gap-4 flex-col">
+                <p class="text-center" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas nam velit rerum. Quidem, recusandae debitis.</p>
+                <p class="text-center text-2xl ">⭐⭐⭐⭐⭐</p>
+                <p class="text-center font-bold text-2xl">Mr Mitchel-jonson</p>
+                <img class="rounded-full customerimg h-52 w-52" src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWVufGVufDB8fDB8fHww" alt="">
+            </div>
+        </div>
+        
+        
+    </div>
+    <footer class="py-14 bg-black text-white flex flex-col justify-center items-center gap-3 px-12">
+        <div class="grid md:grid-cols-3 sm:grid-cols-2  gap-4 py-2 px-2">
+          <div class="flex flex-col justify-center items-center gap-3 py-3 px-2 ">
+            <p class="text-2xl font-bold underline text-start">Carwebsite</p>
+            <p class="text-xl text-start font-normal">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <div class="flex justify-center items-center gap-4 px-2 py-3">
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href=""><i class="fa-brands fa-facebook"></i></a>
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href=""><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div> 
+          
+          <div class="flex flex-col justify-center items-center gap-3 py-4 px-3">
+            <p class="text-start text-2xl font-bold">Quick Links</p>
+            <ul class="flex justify-center flex-col items-center gap-3 py-3 text-white">
+                <li class="hover:text-purple-700"><a href="index.html">Home</a></li>
+                <li class="hover:text-purple-700"><a href="about.html">About</a></li>
+                <li class="hover:text-purple-700"><a href="salecar.html">Services</a></li>
+                <li class="hover:text-purple-700"><a href="cars.html">Cars</a></li>
+                <li class="hover:text-purple-700"><a href="contact.html">Sitemap</a></li>
+                <li class="hover:text-purple-700"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col py-4 px-3 justify-center items-center text-white gap-3">
+            <p class="text-start text-2xl font-bold">Have a Questions?</p>
+            <div class="flex justify-between gap-3 py-4">
+                <i class="fa-solid fa-phone"></i>
+                <p>+923202815090</p>
+            </div>
+            <div class="flex justify-center gap-3 px-2 py-4">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Pakistan , Punjab, Vehari</p>
+            </div>
+            <div class="flex justify-center text-white gap-3 px-2 py-4">
+                <i class="fa-regular fa-envelope"></i>
+                <p>waleed.webcoder@gmail.com</p>
+            </div>
+          </div> 
+
+        </div>
+        <p class="text-center font-bold">Copyright ©2024 All rights reserved &nbsp;&nbsp; |&nbsp; Developed   by Waleed S</p>
+    </footer>
+    
+    
+
+     
+
+   
+    <script src="index.js"></script>
+    <!-- script for sign in requirement  -->
+    <script>
+        let cars=document.querySelectorAll(".carss")
+       cars.forEach((e)=>{
+        e.addEventListener("click",(i)=>{
+            i.preventDefault();
+            alert("Please Signup/Login first !");
+
+        })
+       })
+        let carda=document.querySelectorAll(".carda")
+       carda.forEach((e)=>{
+        e.addEventListener("click",(i)=>{
+            i.preventDefault();
+            alert("Please Signup/Login first !");
+
+        })
+       })
+            
+       
+    </script>
+    <!-- script for navbar  -->
+    <script>
+        let button=document.getElementById("toggleButton");
+        let mblmenu=document.getElementById("mblmenu");
+        let repeat=1;
+        button.addEventListener("click",()=>{
+            
+            if(repeat==1){
+    
+                mblmenu.classList.remove("hidden");
+                mblmenu.classList.add("flex");
+                repeat=0;
+            }
+            else if(repeat==0){
+                mblmenu.classList.add("hidden");
+                mblmenu.classList.remove("flex");
+                repeat=1;
+    
+            }
+        })
+    </script>
+</body>
+</html>

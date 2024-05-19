@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cars</title>
+    <style>
+        
+        /* style for cars already  */
+        .cars{
+            box-shadow: 0px 0px 5px 2px black;
+        }
+        #hscreen{
+            background-image: url(https://w0.peakpx.com/wallpaper/187/769/HD-wallpaper-car-in-nice-scenery-water-nice-scenery-car.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 85vh;
+        }
+        #input{
+            box-shadow: 0px 0px 5px 5px rgb(218, 119, 119);
+        }
+    </style>
+</head>
+<body>
+    <nav class=" text-white  bg-gray-600 flex justify-around items-center h-20">
+        <div>
+            <span class="font-serif font-extrabold text-4xl text-red-700">C</span><span class="text-white text-2xl font-semibold">ar&nbsp;</span><span class="font-serif text-3xl font-bold text-yellow-500">W</span><span class="text-white text-2xl font-semibold">ebsite</span>
+        </div>
+        <ul class="hidden lg:flex justify-center items-center gap-8 text-[18px]">
+            <li class="hover:border-b-2 "><a  href="index.html">Home</a></li>
+            <li class="hover:border-b-2"><a  href="about.html">About us</a></li>
+            <li class="hover:border-b-2"><a  href="contact.html">Contact us</a></li>
+            <li class="hover:border-b-2"><a  href="cars.html">Gallery</a></li>
+        </ul>
+        <ul class="hidden lg:flex justify-center items-center gap-8">
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md  px-5"><a href="salecar.html">Sell Cars</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md px-5"><a href="cars.html">Buy Cars</a></li>
+            
+        </ul>
+        <button id="toggleButton" class="lg:hidden text-white bg-gray-600 p-3 rounded-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        
+    </nav>
+    <!-- code for mobile menu  -->
+    
+    <ul id="mblmenu" class=" w-full  h-screen hidden justify-evenly flex-col items-center bg-orange-600 gap text-red-50 text-[18px]">
+            <li class="hover:border-b-2"><a  href="index.html">Home</a></li>
+            <li class="hover:border-b-2"><a  href="about.html">About us</a></li>
+            <li class="hover:border-b-2"><a  href="contact.html">Contact us</a></li>
+            <li class="hover:border-b-2"><a  href="cars.html">Gallery</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md  px-5"><a href="salecar.html">Sell Cars</a></li>
+            <li class="bg-rose-700 hover:border-b-2 hover:underline underline-offset-2 py-2 rounded-md px-5"><a href="cars.html">Buy Cars</a></li>
+    </ul>
+
+    <div id="hscreen" class="w-full flex justify-center items-center py-2 px-2">
+        <input  class="py-2 lg:px-8 bg-white text-center text-xl rounded-full text-black" type="search" name="" id="input" placeholder="Search Cars">
+    </div>
+    <!-- code for featured cars  -->
+
+    <div class="bg-white py-6 px-4 flex-col justify-center items-center flex gap-3">
+        <p class="py-2 px-1 text-center text-3xl font-bold text-black">Featured Cars</p>
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-3 py-2 px-2">
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/CITROEN/C4/ELECTRIC/24CitEC4Eseries5drGryFR1_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Toyota Prius 2022</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 4400000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Karachi</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/MG%20MOTOR%20UK/ZS/5DR/23MgZsExcl5drWhiFR2_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">24 Alpine A110</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 12300000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>USA</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/GENESIS/GV70/5DR/73GenGV70EVSpoGre5DrFR2_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">24 Jeep Avenger</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 33400000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Islamabad</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/ALFA%20ROMEO/TONALE/5DR/73AlfRomTonTi5drRedFR_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">24 Alfa Romeo Tonale</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 33200000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Peshawar</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/VOLVO/EX30/5DR/24VolEX305drYelFL1_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">24 Fiat 500</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 6400000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Dubai</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/FIAT/500/3DR/70Fia500MilHybLou3drBlaFR-1_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Brand New Kia Picanto</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 89000000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>China</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/HONDA/CR-V/5DR/73HonCrvHyb5drWhiFR2_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Brand New Hyundai i20</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 12300000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Bahawalpur</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/DACIA/SANDERO%20STEPWAY/5DR/23DaciaSanStepJou5drOraFR3_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Brand New 24 MG ZS</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 8800000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Multan</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/RENAULT/CAPTUR/5DR/23RenCapWhi5DrFR_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Brand New BYD Dolphin</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 3500000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Sialkot</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/ALPINE/A110/3DR/73AlpA110SEnsGre3drFL1_800.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Brand New MINI Cooper</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 7200000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Islamabad</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="bg-white cars rounded-md flex justify-center items-center flex-col">
+                <img src="https://mywheels.pk/uploads/gallery/IMG-20240513-WA00261.jpg" alt="image">
+                <div class=" bg-white flex justify-center items-center flex-col gap-2 px-2 py-2">
+
+                    <a class="text-2xl text-blue-800 hover:underline text-center" href="">Brand New Mazda MX-30</a>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>PKR Rs 1340000</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Lahore</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- code for footers  -->
+    <footer class="py-14 bg-black text-white flex flex-col justify-center items-center gap-3 px-12">
+        <div class="grid md:grid-cols-3 sm:grid-cols-2  gap-4 py-2 px-2">
+          <div class="flex flex-col justify-center items-center gap-3 py-3 px-2 ">
+            <p class="text-2xl font-bold underline text-start">Carwebsite</p>
+            <p class="text-xl text-start font-normal">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <div class="flex justify-center items-center gap-4 px-2 py-3">
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href="https://twitter.com/x/migrate?tok=eyJlIjoiL1dhbGVlZF9fX1M%2FdD1QRkxEd3V4bW5WTkFjVXZxUnJvd0FRJnM9MDkiLCJ0IjoxNzE2MTQxOTA3ffZGZEPmtgpHKBvzf1aZZu0%3D"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href="https://web.facebook.com/people/Waleed-S/61557914682339/"><i class="fa-brands fa-facebook"></i></a>
+                <a class="bg-blue-500 px-4 py-3 rounded-full text-white text-xl" href="https://waleed-s-portfolio.netlify.app"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div> 
+          
+          <div class="flex flex-col justify-center items-center gap-3 py-4 px-3">
+            <p class="text-start text-2xl font-bold">Quick Links</p>
+            <ul class="flex justify-center flex-col items-center gap-3 py-3 text-white">
+                <li class="hover:text-purple-700"><a href="index.html">Home</a></li>
+                <li class="hover:text-purple-700"><a href="about.html">About</a></li>
+                <li class="hover:text-purple-700"><a href="salecar.html">Services</a></li>
+                <li class="hover:text-purple-700"><a href="cars.html">Cars</a></li>
+                <li class="hover:text-purple-700"><a href="contact.html">Sitemap</a></li>
+                <li class="hover:text-purple-700"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col py-4 px-3 justify-center items-center text-white gap-3">
+            <p class="text-start text-2xl font-bold">Have a Questions?</p>
+            <div class="flex justify-between gap-3 py-4">
+                <i class="fa-solid fa-phone"></i>
+                <p>+923202815090</p>
+            </div>
+            <div class="flex justify-center gap-3 px-2 py-4">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Pakistan , Punjab, Vehari</p>
+            </div>
+            <div class="flex justify-center text-white gap-3 px-2 py-4">
+                <i class="fa-regular fa-envelope"></i>
+                <p>waleed.webcoder@gmail.com</p>
+            </div>
+          </div> 
+
+        </div>
+        <p class="text-center font-bold">Copyright ©2024 All rights reserved &nbsp;&nbsp; |&nbsp; Developed   by Waleed S</p>
+    </footer>
+    
+    <script>
+        let button=document.getElementById("toggleButton");
+        let mblmenu=document.getElementById("mblmenu");
+        let repeat=1;
+        button.addEventListener("click",()=>{
+            
+            if(repeat==1){
+    
+                mblmenu.classList.remove("hidden");
+                mblmenu.classList.add("flex");
+                repeat=0;
+            }
+            else if(repeat==0){
+                mblmenu.classList.add("hidden");
+                mblmenu.classList.remove("flex");
+                repeat=1;
+    
+            }
+        })
+    </script>
+    <script>
+        let car=document.querySelectorAll(".cars")
+       car.forEach((e)=>{
+        e.addEventListener("click",(i)=>{
+            i.preventDefault()
+            alert("Please Signup/Login first !");
+
+        })
+       })
+            
+       
+    </script>
+    
+    
+</body>
+</html>
+
+
